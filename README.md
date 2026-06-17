@@ -8,7 +8,7 @@
 
 | 文件 | 说明 |
 | --- | --- |
-| `srs/AD server lists.srs` | 聚合后的广告屏蔽 SRS 文件，推荐优先使用 |
+| `srs/AD server lists.srs` | 将下面 6 个列表合并并去重后的聚合 SRS 文件，可以直接引用，推荐优先使用 |
 | `srs/Adblock4limbo.srs` | 基于 Limbopro / Adblock4limbo 的规则 |
 | `srs/BanAD.srs` | BanAD 广告规则 |
 | `srs/easylist.srs` | EasyList 广告规则 |
@@ -20,6 +20,8 @@
 ## sing-box 使用方式
 
 把下面片段合并到现有 sing-box 配置的 `route` 部分中。示例使用聚合规则文件：
+
+`srs/AD server lists.srs` 是将 `Adblock4limbo`、`BanAD`、`easylist`、`easylistchina`、`easyprivacy`、`Peter_Lowe_adservers` 这 6 个列表合并并去重后的文件，可以直接进行引用。
 
 ```json
 {
